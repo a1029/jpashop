@@ -1,0 +1,22 @@
+= RESTful Notes API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+ifndef::snippets[]
+:snippets: ./build/generated-snippets
+endif::[]
+
+== Hello
+include::{snippets}/hello/curl-request.adoc[]
+include::{snippets}/hello/http-request.adoc[]
+include::{snippets}/hello/http-response.adoc[]
+include::{snippets}/hello/response-fields.adoc[]
+
+== HelloPost
+include::{snippets}/helloPost/curl-request.adoc[]
+include::{snippets}/helloPost/http-request.adoc[]
+include::{snippets}/helloPost/http-response.adoc[]
