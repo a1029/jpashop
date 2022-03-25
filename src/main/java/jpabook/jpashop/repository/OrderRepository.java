@@ -38,7 +38,7 @@ public class OrderRepository {
             } else {
                 jpql += " and";
             }
-            jpql += " o.status + :status";
+            jpql += " o.status = :status";
         }
 
         if (StringUtils.hasText(orderSearch.getMemberName())) {
@@ -61,8 +61,7 @@ public class OrderRepository {
             query = query.setParameter("name", orderSearch.getMemberName());
         }
 
-        return em.createQuery(jpql, Order.class)
-                .getResultList();
+        return query.getResultList();
     }
 
     public List<Order> findAllByCriteria(OrderSearch orderSearch) {
